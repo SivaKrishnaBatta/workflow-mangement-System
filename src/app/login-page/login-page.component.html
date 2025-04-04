@@ -1,0 +1,64 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="container-fluid" [ngStyle]="{'background-image': 'url(assets/Images/Background.jpg)'}">
+  
+    <div class="row w-75 ">
+      <div class="col-md-6 d-flex flex-column justify-content-center align-items-start text-white p-4 rounded-start">
+    <div class="flexs-container ">
+      <img src="assets/Images/logo.jpg" alt="Logo" class="me-3 logo-img">
+      <h2 class="fw-bold m-0">HighBridge</h2>
+    </div>
+    <h4>Building the Future...</h4>
+    <p class="txt1">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua.</p>
+  </div>
+  
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="login-card p-4 shadow-lg bg-white rounded">
+          <h5 class="welcome ">WELCOME BACK!</h5>
+          <h3 class="fw-bold login ">Log In to your Account</h3>
+          <form (ngSubmit)="validateForm()">
+            <div class="mb-3">
+              <label for="email" class="form-label labels">Email</label>
+              <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="Type here..." required>
+              <div class="text-danger small" *ngIf="emailError">Email must end with @gmail.com</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label labels">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Type here..." required>
+              <div class="text-danger small" *ngIf="passwordError">Password is required</div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <input type="checkbox" id="remember" class="form-check-input box">
+                <label for="remember" class="form-check-label">Remember me</label>
+              </div>
+              <a href="#" class="text-decoration-none forgot">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-danger w-100" (click)="navigateToLogin()" >Log In</button>
+            <div class="text-center my-3">
+              <span class="divider-text">Or</span>
+            </div>
+            <!-- <button class="btn btn-outline-secondary w-100 mb-2 ">
+              <img src="assets/images/icons8-google.png" width="20" alt="Google"> Log In with Google
+            </button> -->
+  
+            <button class="custom-btn">
+              <img src="assets/Images/google.jpg" alt="Google">
+              <span>Log In with Google</span>
+            </button>
+            
+            <button class="custom-btn">
+              <img src="assets/Images/fb.jpg" width="20" alt="Facebook"> 
+              <span>Log In with Facebook</span>
+              
+            </button>
+            <button class="custom-btn">
+              <img src="assets/Images/Shape.jpg" width="20" alt="Apple"> 
+              <span>Log In with Apple</span>
+            </button>
+            <p class="text-center mt-5">New User? <a href="#" class="fw-bold signUp"><b>SIGN UP HERE</b></a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>Create New Workflow</mat-card-title>
+  <form [formGroup]="workflowForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit" [disabled]="workflowForm.invalid">Save</button>
+      <button mat-button color="warn" type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</mat-card>

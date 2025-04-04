@@ -1,0 +1,67 @@
+
+
+mat-card {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+mat-card:hover {
+    transform: scale(1.02);
+}
+
+mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+mat-form-field input, mat-form-field textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+mat-form-field input:focus, mat-form-field textarea:focus {
+    border-color: #e67e22;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+button[mat-raised-button] {
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: background 0.3s;
+}
+
+button[mat-raised-button]:hover {
+    background-color: #d35400;
+}
+
+button[mat-button] {
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+button[mat-button]:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
